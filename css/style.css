@@ -701,3 +701,47 @@ body{
       margin-left: 30px;
    }
 }
+@media (max-width: 600px) {
+   .slider__title{
+      font-size: 25px;
+   }
+   .news__headtitle{
+      font-size: 25px;
+   }
+   .gallery__title{
+      font-size: 25px;
+   }
+   .projects__headtitle{
+      font-size: 25px;
+   }
+   .gallery__img1{
+      width: 300px;
+      height: 300px;
+   }
+   .gallery__img2{
+      width: 150px;
+      height: 150px;
+   }
+   .gallery__img3{
+      width: 150px;
+      height: 150px;
+   }
+   .gallery__img4{
+      width: 150px;
+      height: 150px;
+   }
+   .gallery__img5{
+      width: 150px;
+      height: 150px;
+   }
+   .contacts__field_title{
+      font-size: 20px;
+   }
+   .gallery__list{
+      margin-left: 0px;
+   }
+   .projects__img_second, .projects__img{
+      width: 200px;
+      height: 200px;
+   }
+}
