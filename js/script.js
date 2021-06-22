@@ -77,24 +77,24 @@ const projects = document.getElementById('projects')
 const news = document.getElementById('news')
 const contacts = document.getElementById('contacts')
 const maps = document.getElementById('map')
-// console.log(projects.offsetTop)
 
 
 
-// scrollingForHideToShow(nav)
-// function scrollingForHideToShow(element) {
-//    let scrolled = window.scrollY;
+window.addEventListener('scroll', function () {
+   let oldScroll = this.oldScroll || 0
+   let newScroll = this.scrollY
+   if (newScroll > oldScroll) {
+      nav.classList.remove('show')
+      nav.classList.add('hidden')
+   }
+   else {
+      nav.classList.remove('hidden')
+      nav.classList.add('show')
+   }
+   this.oldScroll = newScroll;
+})
 
-//    if (scrolled > 100 && scrolled > scrollPrev) {
-//       element.classList.remove('show');
-//       element.classList.add('hidden');
 
-//    } else {
-//       element.classList.remove('hidden');
-//       element.classList.add('show');
-//    }
-//    scrollPrev = scrolled;
-// }
 
 
 window.addEventListener('scroll', function () {

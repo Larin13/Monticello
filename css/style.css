@@ -210,7 +210,7 @@ body{
    line-height: 30px;
    color: #4b5562;
    font-weight: 400;
-   font-family: "Open Sans";
+   font-family: 'Montserrat', sans-serif;
    margin-top: 30px;
 }
 .projects__btn{
@@ -228,6 +228,9 @@ body{
 }
 .projects__btn:active{
    border: 3px solid #2c4058;
+}
+.projects__btn:hover{
+   animation: border 2s linear infinite;
 }
 .projects__place{
    font-style: italic;
@@ -354,6 +357,29 @@ body{
 .gallery{
    padding-top: 100px;
 }
+@keyframes border{
+   0%{
+      background-image: linear-gradient(to right, rgb(101, 115, 255), rgb(122, 113, 238), rgb(143, 112, 220), rgb(164, 110, 203), rgb(185, 109, 185), rgb(206, 107, 168), rgb(178, 125, 175), rgb(149, 143, 181), rgb(121, 162, 188), rgb(92, 180, 194), rgb(64, 198, 201), rgb(35, 216, 207), rgba(0, 255, 3, 1), rgba(113, 252, 0, 1));
+      background-size: 200%;
+      background-position: 0;
+   }
+
+   50%{
+      background-image: linear-gradient(to right, rgb(101, 115, 255), rgb(122, 113, 238), rgb(143, 112, 220), rgb(164, 110, 203), rgb(185, 109, 185), rgb(206, 107, 168), rgb(178, 125, 175), rgb(149, 143, 181), rgb(121, 162, 188), rgb(92, 180, 194), rgb(64, 198, 201), rgb(35, 216, 207), rgba(0, 255, 3, 1), rgba(113, 252, 0, 1));
+      background-size: 200%;
+      background-position: 100%;
+   }
+
+   100%{
+      background-image: linear-gradient(to right, rgb(101, 115, 255), rgb(122, 113, 238), rgb(143, 112, 220), rgb(164, 110, 203), rgb(185, 109, 185), rgb(206, 107, 168), rgb(178, 125, 175), rgb(149, 143, 181), rgb(121, 162, 188), rgb(92, 180, 194), rgb(64, 198, 201), rgb(35, 216, 207), rgba(0, 255, 3, 1), rgba(113, 252, 0, 1));
+      background-size: 200%;
+      background-position: 50%;
+   }
+}
+.gallery_select{
+   border-radius: 10px;
+}
+
 .gallery__title{
    font-size: 44px;
    line-height: 22px;
@@ -418,6 +444,7 @@ body{
    width: 100%;
    height: 100%;
    object-fit: cover;
+   overflow: hidden;
 }
 
 .gallery_select{
@@ -441,6 +468,9 @@ body{
    height: 50px;
    background-color: #fff;
    border: 1px solid #2c4058;
+}
+.gallery__btn:hover{
+   animation: border 2s linear infinite;
 }
 .gallery__btn:active{
    border: 3px solid #2c4058;
@@ -518,6 +548,9 @@ body{
    height: 50px;
    border: 1px solid #2c4058;
 }
+.contacts_btn:hover{
+   animation: border 2s linear infinite;
+}
 .contacts_btn:active{
    border: 3px solid #2c4058;
 }
@@ -586,13 +619,22 @@ body{
    display: flex;
 }
 #burger__menu{
-   width: 100px;
-   height: 30px;
+   width: 70px;
+   height: 70px;
    position: absolute;
    top: 20px;
    right: 50px;
    z-index: 11;
    display: none;
+   font-family: 'Montserrat', sans-serif;
+   background: #3b7fd3;
+   color: white;
+   border: 2px solid white;
+   border-radius: 50%;
+   animation: border 2s linear infinite;
+}
+#burger__menu:hover{
+   border: 5px solid white;
 }
 @media (max-width: 1300px) {
    .gallery__list{
@@ -654,9 +696,11 @@ body{
    }
 }
 @media (max-width: 970px) {
+   .hidden {
+      transform: translateY(0)!important;
+   }
+   
    #burger__menu{
-      width: 100px;
-      height: 30px;
       position: absolute;
       top: 20px;
       right: 50px;
@@ -665,9 +709,19 @@ body{
    }
    .header__nav{
       display: none;
-      text-align: center;
+      text-align: left;
       padding-bottom: 20px;
       position: unset;
+   }
+   .nav__list{
+      display: block;
+      text-align: left;
+   }
+   .nav__link{
+      font-size: 15px;
+   }
+   .nav__item{
+      margin-bottom: 20px;
    }
    .display_block{
       display: block;
@@ -713,9 +767,14 @@ body{
       text-align: center;
 
    }
+   .contacts__email, .contacts__name, .contacts_btn{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 15px;
+   }
+
    .contacts__input{
       display: block;
-
    }
    .contacts_field{
       height: unset;
