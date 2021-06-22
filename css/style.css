@@ -649,6 +649,9 @@ body{
    .projects__backimg, .projects__backimg_second{
       display: none;
    }
+   .projects__img{
+      margin-right: 0;
+   }
 }
 @media (max-width: 970px) {
    #burger__menu{
@@ -687,8 +690,53 @@ body{
       padding-bottom: 50px;
    }
 }
-@media (max-width: 750px) {
-   
+@media (max-width: 800px) {
+   .slider__title{
+      font-size: 30px;
+   }
+   .projects__headtitle, .news__headtitle, .gallery__title{
+      font-size: 30px;
+   }
+   .projects__item{
+      text-align: center;
+   }
+   .projects__img{
+      width: 450px;
+      height: 300px;
+      object-fit: cover;
+   }
+   .projects__title{
+      font-size: 30px;
+   }
+   .contacts__form{
+      display: block;
+      text-align: center;
+
+   }
+   .contacts__input{
+      display: block;
+
+   }
+   .contacts_field{
+      height: unset;
+      padding-bottom: 20px;
+   }
+   .contacts_btn{
+      margin-top: 20px;
+   }
+}
+@media (max-width: 600px) {
+   .projects__img{
+      width: 350px;
+      height: 250px;
+      object-fit: cover;
+   }
+   .projects__title{
+      font-size: 25px;
+   }
+   .slider__subtitle{
+      font-size: 15px;
+   }
 }
 
 
