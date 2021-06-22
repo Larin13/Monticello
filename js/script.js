@@ -2,6 +2,18 @@ $(document).ready(function () {
    $(".owl-carousel").owlCarousel({
       items: 1,
       loop: true,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      animateOut: "animate__bounceOutDown",
+      animateIn: "animate__bounceInDown",
+      responsive: {
+         0: {
+            dots: false
+         },
+         1200: {
+            dots: true
+         }
+      }
    });
    $(".owl-carousel_second").owlCarousel({
       margin: 50,
@@ -9,15 +21,20 @@ $(document).ready(function () {
       loop: true,
       nav: true,
       autoplay: true,
+      autoplayTimeout: 2000,
       navText: ['<', '>'],
+      dotsEach: true,
       responsive: {
          0: {
-            items: 1
+            items: 1,
+            nav: false
          },
-         800: {
-            items: 2
+         900: {
+            items: 2,
+            nav: false
          },
          1200: {
+            nav: true,
             items: 3
          }
       }
@@ -54,13 +71,31 @@ $('.nav__link').on('click', function (e) {
    }, 1000)
 })
 
-let header = document.getElementById('header')
-let nav = document.getElementById('header__nav')
-let projects = document.getElementById('projects')
-let news = document.getElementById('news')
-let contacts = document.getElementById('contacts')
-let maps = document.getElementById('map')
-console.log(projects.offsetTop)
+const header = document.getElementById('header')
+const nav = document.getElementById('header__nav')
+const projects = document.getElementById('projects')
+const news = document.getElementById('news')
+const contacts = document.getElementById('contacts')
+const maps = document.getElementById('map')
+// console.log(projects.offsetTop)
+
+
+
+// scrollingForHideToShow(nav)
+// function scrollingForHideToShow(element) {
+//    let scrolled = window.scrollY;
+
+//    if (scrolled > 100 && scrolled > scrollPrev) {
+//       element.classList.remove('show');
+//       element.classList.add('hidden');
+
+//    } else {
+//       element.classList.remove('hidden');
+//       element.classList.add('show');
+//    }
+//    scrollPrev = scrolled;
+// }
+
 
 window.addEventListener('scroll', function () {
    let scrollHeight = window.scrollY;
@@ -134,3 +169,5 @@ select.addEventListener('change', function () {
 document.getElementById('burger__menu').addEventListener('click', function () {
    nav.classList.toggle('display_block')
 })
+
+
